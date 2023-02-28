@@ -43,7 +43,13 @@ namespace CRUD_With_Angular.Repo
 
         public async Task<Employee> UpdateAsync(Guid id, Employee employee)
         {
-            _context.tblEmployee.Update(employee);
+            var data = _context.tblEmployee.FirstOrDefault(n => n.Id == id);
+
+            data.Email = employee.Email;
+            data.Phone = employee.Phone;
+            data.Name = employee.Name;
+
+            _context.tblEmployee.Update(data);
             await _context.SaveChangesAsync();
 
             return employee;

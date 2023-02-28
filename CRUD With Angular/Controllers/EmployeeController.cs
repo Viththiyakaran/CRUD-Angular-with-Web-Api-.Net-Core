@@ -1,5 +1,6 @@
 ﻿using CRUD_With_Angular.Interface;
 using CRUD_With_Angular.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -8,6 +9,7 @@ namespace CRUD_With_Angular.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployee _servie;
