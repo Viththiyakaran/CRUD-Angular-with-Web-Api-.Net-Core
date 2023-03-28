@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
 import { Employee } from '../model/employee';
 import { Observable } from 'rxjs';
+import { Login } from '../model/login';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class EmployeeService {
   constructor(private httpClient : HttpClient) { }
 
   baseUrl = "http://localhost:5201/api/Employee";
+
+
 
   GetEmployee() : Observable<Employee[]>{
     return this.httpClient.get<Employee[]>(this.baseUrl);
@@ -32,4 +35,6 @@ export class EmployeeService {
 
     return this.httpClient.delete<Employee>(this.baseUrl + '/' + id);
   }
+
+
 }

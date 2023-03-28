@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD_With_Angular.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230227120708_Init Db")]
-    partial class InitDb
+    [Migration("20230327141756_Initdb")]
+    partial class Initdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,17 @@ namespace CRUD_With_Angular.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("tblEmployee");
+                });
+
+            modelBuilder.Entity("CRUD_With_Angular.Models.Login", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tblLogin");
                 });
 #pragma warning restore 612, 618
         }

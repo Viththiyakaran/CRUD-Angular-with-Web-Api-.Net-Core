@@ -9,7 +9,7 @@ namespace CRUD_With_Angular.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+   // [Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployee _servie;

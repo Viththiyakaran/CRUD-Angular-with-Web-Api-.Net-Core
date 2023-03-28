@@ -8,10 +8,12 @@
     ".NETCoreApp,Version=v6.0": {
       "CRUD With Angular/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.15",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.3",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "System.Linq": "4.3.0"
         },
         "runtime": {
           "CRUD With Angular.dll": {}
@@ -56,6 +58,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.15": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.21.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "6.0.15.0",
+            "fileVersion": "6.0.1523.12404"
           }
         }
       },
@@ -505,6 +518,13 @@
           }
         }
       },
+      "System.Collections/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Configuration.ConfigurationManager/5.0.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "5.0.0",
@@ -515,6 +535,13 @@
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.51904"
           }
+        }
+      },
+      "System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Diagnostics.DiagnosticSource/5.0.0": {},
@@ -570,6 +597,15 @@
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Linq/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
         }
       },
       "System.Memory/4.5.4": {},
@@ -637,6 +673,13 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Security.AccessControl/5.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -775,6 +818,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FvMT6e6EzBVeKzEh5vT25LrWtc3HNcnlanbFUli+PIoL8WKuCUOUSpwN7XFJJBLUW3S+QT/xG+Qa6jo+FlM1zg==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.15",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.15.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",
@@ -1077,12 +1127,26 @@
       "path": "system.codedom/4.4.0",
       "hashPath": "system.codedom.4.4.0.nupkg.sha512"
     },
+    "System.Collections/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
+      "path": "system.collections/4.3.0",
+      "hashPath": "system.collections.4.3.0.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/5.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-aM7cbfEfVNlEEOj3DsZP+2g9NRwbkyiAv2isQEzw7pnkDg9ekCU2m1cdJLM02Uq691OaCS91tooaxcEn8d0q5w==",
       "path": "system.configuration.configurationmanager/5.0.0",
       "hashPath": "system.configuration.configurationmanager.5.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
+      "path": "system.diagnostics.debug/4.3.0",
+      "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/5.0.0": {
       "type": "package",
@@ -1125,6 +1189,13 @@
       "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Linq/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
+      "path": "system.linq/4.3.0",
+      "hashPath": "system.linq.4.3.0.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",
@@ -1188,6 +1259,13 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
+      "path": "system.runtime.extensions/4.3.0",
+      "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
     },
     "System.Security.AccessControl/5.0.0": {
       "type": "package",

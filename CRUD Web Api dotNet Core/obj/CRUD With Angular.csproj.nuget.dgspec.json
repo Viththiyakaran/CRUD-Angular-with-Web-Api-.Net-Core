@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD With Angular\\CRUD With Angular.csproj": {}
+    "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD Web Api dotNet Core\\CRUD With Angular.csproj": {}
   },
   "projects": {
-    "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD With Angular\\CRUD With Angular.csproj": {
+    "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD Web Api dotNet Core\\CRUD With Angular.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD With Angular\\CRUD With Angular.csproj",
+        "projectUniqueName": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD Web Api dotNet Core\\CRUD With Angular.csproj",
         "projectName": "CRUD With Angular",
-        "projectPath": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD With Angular\\CRUD With Angular.csproj",
+        "projectPath": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD Web Api dotNet Core\\CRUD With Angular.csproj",
         "packagesPath": "C:\\Users\\Softlogic\\.nuget\\packages\\",
-        "outputPath": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD With Angular\\obj\\",
+        "outputPath": "E:\\ASP\\Angular\\CRUD-Angular-with-Web-Api-.Net-Core\\CRUD Web Api dotNet Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Softlogic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"
@@ -57,6 +61,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

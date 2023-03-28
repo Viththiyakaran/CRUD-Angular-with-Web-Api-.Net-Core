@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRUD_With_Angular.Migrations
 {
     /// <inheritdoc />
-    public partial class InitDb : Migration
+    public partial class Initdb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +24,17 @@ namespace CRUD_With_Angular.Migrations
                 {
                     table.PrimaryKey("PK_tblEmployee", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "tblLogin",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tblLogin", x => x.Id);
+                });
         }
 
         /// <inheritdoc />
@@ -31,6 +42,9 @@ namespace CRUD_With_Angular.Migrations
         {
             migrationBuilder.DropTable(
                 name: "tblEmployee");
+
+            migrationBuilder.DropTable(
+                name: "tblLogin");
         }
     }
 }

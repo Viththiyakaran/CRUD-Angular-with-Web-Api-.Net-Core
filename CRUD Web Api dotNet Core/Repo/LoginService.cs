@@ -35,10 +35,10 @@ namespace CRUD_With_Angular.Repo
                         new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                         new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                        new Claim("EmpId", loginDetail.EmpId.ToString()),
-                       // new Claim("DisplayName", loginDetail.FullName),
-                        new Claim("FullName", loginDetail.FullName),
-                        new Claim("Email", loginDetail.Email)
+                        new Claim("EmpId", data.EmpId.ToString()),
+                        new Claim("DisplayName", data.FullName.ToString()),
+                        new Claim("UserName", data.FullName.ToString()),
+                        new Claim("Email", data.Email.ToString())
                     };
 
 
@@ -65,6 +65,7 @@ namespace CRUD_With_Angular.Repo
             {
                 return null;
             }
+
        
         }
 

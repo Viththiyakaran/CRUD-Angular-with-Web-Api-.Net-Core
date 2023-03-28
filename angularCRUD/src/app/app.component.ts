@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   EmplyoeeFromGroup: FormGroup;
 
+
   constructor(private empService: EmployeeService, private fb: FormBuilder) {
 
     this.EmplyoeeFromGroup = this.fb.group({
@@ -22,6 +23,9 @@ export class AppComponent implements OnInit {
       phone: [""],
       email: [""]
     })
+
+
+
 
   }
 
@@ -86,6 +90,8 @@ export class AppComponent implements OnInit {
 
     this.getEmployee();
   }
+
+
 
   title = 'angularCRUD';
 }

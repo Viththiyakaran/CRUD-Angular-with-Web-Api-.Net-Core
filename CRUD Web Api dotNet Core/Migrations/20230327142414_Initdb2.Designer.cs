@@ -4,6 +4,7 @@ using CRUD_With_Angular.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD_With_Angular.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230327142414_Initdb2")]
+    partial class Initdb2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,25 +56,26 @@ namespace CRUD_With_Angular.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmpId"));
 
-                    b.Property<string>("AccessToken")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Designation")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EmpId");
