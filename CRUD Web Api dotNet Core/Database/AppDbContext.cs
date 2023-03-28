@@ -10,7 +10,11 @@ namespace CRUD_With_Angular.Database
         
         }
 
-        public DbSet<Employee> tblEmployee { get; set; }    
-       
+        public DbSet<Employee> tblEmployee { get; set; }
+
+        public DbSet<Login> tblLogin { get; set; }
+
+        
+
     }
 }
